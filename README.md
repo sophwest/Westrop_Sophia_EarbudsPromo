@@ -20,7 +20,9 @@ sophwest / Sophia Westrop
 
 ## Misc credits:  
 
-
+"Pink Rose" (https://skfb.ly/6QWJS) by Lassi Kaukonen is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).  
+"FREE - SkyBox Space Nebula" (https://skfb.ly/oIIYS) by Paul is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).  
+"MUG - CUP" (https://skfb.ly/ZKn9) by YouniqueĪdeaStudio is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).  
 
 ## License  
 
