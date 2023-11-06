@@ -136,12 +136,10 @@ model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
-#main-header {
+#header-con {
   top: 5px;
   position: sticky;
   z-index: 10;
-  border-radius: 70px;
-  height: 69px;
 }
 
 #header-logo {
@@ -150,10 +148,6 @@ model-viewer > #ar-prompt > img {
 }
 
 #main-nav {
-  display: none;
-}
-
-#header-socials {
   display: none;
 }
 
@@ -183,10 +177,6 @@ model-viewer > #ar-prompt > img {
   }
 }
 @media screen and (min-width: 1366px) {
-  #header-socials {
-    display: block;
-    margin: 5px;
-  }
   #burger-menu {
     display: none;
   }
