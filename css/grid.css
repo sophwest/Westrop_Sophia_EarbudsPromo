@@ -83,14 +83,14 @@ body, p, h1, h2, h3, h4, h5 {
 
 /* ---Tablet Library Grid Styles--- */
 
-@media screen and (min-width: 1024px) { 
+@media screen and (min-width: 768px) { 
    
    .grid-con { 
       display: grid; 
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-column-gap: 16px;
-      padding-left: 52px;
-      padding-right: 52px;
+      padding-left: 56px;
+      padding-right: 56px;
    }
 
    .m-col-auto {grid-column: auto;}
@@ -142,14 +142,14 @@ body, p, h1, h2, h3, h4, h5 {
 
 /* ---Desktop Library Grid Styles--- */
 
-@media screen and (min-width: 1200px) { 
+@media screen and (min-width: 1366px) { 
 
    .grid-con { 
       display: grid; 
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-column-gap: 16px;
-      padding-left: 92px;
-      padding-right: 92px;
+      padding-left: 115px;
+      padding-right: 115px;
    }
 
    .l-col-auto {grid-column: auto;}
