@@ -1,11 +1,9 @@
 @use '../abstracts' as a;
 
-#main-header {
+#header-con {
     top: 5px;
 	position: sticky;
 	z-index: 10;
-    border-radius: 70px;
-    height: 69px;
 }
 
 #header-logo {
@@ -14,10 +12,6 @@
 }
 
 #main-nav {
-    display: none;
-}
-
-#header-socials {
     display: none;
 }
 
@@ -49,10 +43,6 @@
 }
 
 @media screen and (min-width: 1366px) {
-    #header-socials {
-        display: block;
-        margin: 5px;
-    }
 
     #burger-menu {
         display: none;
