@@ -1,0 +1,20 @@
+<model-viewer src="Westrop_Sophia_Earbud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+    <button class="Hotspot" slot="hotspot-1" data-position="-10.177069695602974m 40.10829578254836m 52.68488256044298m" data-normal="0.08151785467365119m 0.02208593436007017m 0.9964271427820744m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Multi-function button</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="-43.092139613007504m 55.837123219107426m -20.77013463485781m" data-normal="-0.862236253171165m -0.06826626399837928m -0.5018848084142957m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Ultra comfortable silicone</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-3.067946438046711m 15.403428906909049m 8.424585197244767m" data-normal="-0.08039588859967531m -0.21102301672685192m -0.9741692807247453m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Lightning fast charging</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="-26.795359364428172m 54.83025928330715m 7.581833258910242m" data-normal="-0.08151785467365118m -0.022085934360070166m -0.9964271427820743m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Adaptive sound</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
