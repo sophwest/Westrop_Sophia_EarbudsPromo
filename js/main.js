@@ -42,16 +42,20 @@
     function loadInfo() {
   
       hotspotBoxes.forEach((hotBox, index) => {
-          let hotTarget = document.querySelector(`#hotspot-${index+1}`);
-          console.log(hotTarget);
-          document.createElement("h2");
-          textContent = hotBox.title;
+          let selected = document.querySelector(`#hotspot-${index+1}`);
+          console.log(selected);
+          const titleElement = document.createElement("h2");
+          titleElement.textContent = hotBox.title;
   
-          document.createElement("p");
-          textContent = hotBox.text;
+          const textElement = document.createElement("p");
+          textElement.textContent = hotBox.text;
+
+          const imageElement = document.createElement("img");
+          imageElement.src = hotBox.image;
   
-          hotTarget.appendChild();
-          hotTarget.appendChild();
+          selected.appendChild(imageElement);
+          selected.appendChild(titleElement);
+          selected.appendChild(textElement);
   
           console.log(hotBox.title);
           console.log(hotBox.text);
