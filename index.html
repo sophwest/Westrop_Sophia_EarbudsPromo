@@ -5,118 +5,133 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/nwb4yew.css">
     <link type="text/css" href="css/styles.css" rel="stylesheet"/>
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-  </head>
+  </head> 
   <body>
     <h1 class="hidden">VOID Audio Earbuds</h1>
 
-    <div id="header-con" class="box">
+    <a id="#top"></a>
+
+    <div id="header-con">
         <header id="main-header" class="grid-con">
             <h2 class="hidden">Header</h2>
 
-            <img src="images/logo-voidaudio.svg" alt="VOID Audio logo" class="col-span-1">
+            <img src="images/logo-voidaudio-white.svg" alt="VOID Audio logo" id="header-logo" class="col-span-1 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-3">
 
             <nav id="mobile-nav">
                 <h3 class="hidden">Hamburger Navigation</h3>
+                <p id="x-button">x</p>
                     <ul>
                         <li><a href="#specs">SPECS</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#">STORE</a></li>
+                        <li><a href="#">CONTACT US</a></li>
                     </ul>
             </nav>
 
-            <nav id="main-nav">
+            <nav id="main-nav" class="m-col-start-4 m-col-end-12 l-col-start-5 l-col-end-12">
                 <h3 class="hidden">Main Navigation</h3>
                 <ul>
                     <li><a href="#specs">SPECS</a></li>
                         <li><a href="#about">ABOUT</a></li>
                         <li><a href="#">STORE</a></li>
+                        <li><a href="#">CONTACT US</a></li>
                 </ul>
             </nav>
 
-            <!-- shopping bag icon here -->
+            <img src="images/icon-shopping-bag.svg" alt="shopping bag icon" id="cart" class="hidden">
 
-            <div id="burger-menu" class="col-start-4 col-end-5 m-col-start-11 m-col-end-13">
+            <div id="burger-menu" class="col-start-4 col-end-5">
                 <img src="images/icon-hamburger.svg" alt="hamburger menu">
             </div>
-            
         </header>
     </div>
 
-    <div id="hero-con" class="grid-con">
-        <section id="scrolling-animation" class="col-span-full">
-            <h2 class="hidden">Hero section- scrolling animation</h2>
-            <img sizes="(max-width: 1366px) 100vw, 1366px"
-                        srcset="
-                        images/scrolling-animation-placeholder-mob.jpg 428w,
-                        images/scrolling-animation-placeholder-tablet.jpg 768w,
-                        images/scrolling-animation-placeholder-desk.jpg 1366w"
-                        src="images/scrolling-animation-placeholder-desk.jpg"
-                        alt="earbuds scrolling animation">
+        <main>
+            <section id="scrolling-animation" class="grid-con">
+                <h2 class="hidden">Hero section- scrolling animation</h2>
+                <!-- scrolling animation here -->
+            </section>
+
+            <div id="buy-now">
+                <button>BUY NOW</button>
+            </div>
+
+        <section id="styles-promo">
+            <h2 class="title">A STYLE FOR EVERYONE</h2>
+            <img src="images/promo-image-colours.jpg" alt="Available colours promo image">
+            <p>VOID Earbuds come in five different colours, so you can express yourself.</p>
         </section>
-        <button>BUY NOW</button>
-    </div>
 
-    <section id="styles-promo">
-        <h2>A STYLE FOR EVERYONE</h2>
-        <img src="" alt="Available colours promo image">
-        <p>VOID Earbuds come in five different colours, so you can express yourself.</p>
-    </section>
-
-    <section id="specs">
-        <h2>SPECS</h2>
-        <div id="ar-model">
-            <!-- <model-viewer> HTML element -->
-            <model-viewer id="model" src="model/Westrop_Sophia_Earbud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="1">
-            <button class="Hotspot" slot="hotspot-1" data-position="-10.177069695602974m 40.10829578254836m 52.68488256044298m" data-normal="0.08151785467365119m 0.02208593436007017m 0.9964271427820744m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-1"></div>
-            </button><button class="Hotspot" slot="hotspot-2" data-position="-43.092139613007504m 55.837123219107426m -20.77013463485781m" data-normal="-0.862236253171165m -0.06826626399837928m -0.5018848084142957m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-2"></div>
-            </button><button class="Hotspot" slot="hotspot-3" data-position="-3.067946438046711m 15.403428906909049m 8.424585197244767m" data-normal="-0.08039588859967531m -0.21102301672685192m -0.9741692807247453m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-3"></div>
-            </button><button class="Hotspot" slot="hotspot-4" data-position="-26.795359364428172m 54.83025928330715m 7.581833258910242m" data-normal="-0.08151785467365118m -0.022085934360070166m -0.9964271427820743m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-4"></div>
-            </button>
-            <div class="progress-bar hide" slot="progress-bar">
-                <div class="update-bar"></div>
-            </div>
-            <button slot="ar-button" id="ar-button">
-                View in your space
-            </button>
-            <div id="ar-prompt">
-                <img src="images/ar_hand_prompt.png">
-            </div>
-            </model-viewer>
+        <div class="divider">
+            <img src="images/waveform-divider.svg" alt="waveform">
         </div>
 
-        <div id="case-section" class="col-span-full">
-            <div id="case-pic">
-                <p>3d render of case</p>
+        <section id="specs">
+            <h2 class="title">SPECS</h2>
+            <div id="ar-model">
+                <!-- <model-viewer> HTML element -->
+                <model-viewer id="model" src="model/Westrop_Sophia_Earbud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="1">
+                <button class="Hotspot" slot="hotspot-1" data-position="-10.177069695602974m 40.10829578254836m 52.68488256044298m" data-normal="0.08151785467365119m 0.02208593436007017m 0.9964271427820744m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-1"></div>
+                </button><button class="Hotspot" slot="hotspot-2" data-position="-43.092139613007504m 55.837123219107426m -20.77013463485781m" data-normal="-0.862236253171165m -0.06826626399837928m -0.5018848084142957m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-2"></div>
+                </button><button class="Hotspot" slot="hotspot-3" data-position="-3.067946438046711m 15.403428906909049m 8.424585197244767m" data-normal="-0.08039588859967531m -0.21102301672685192m -0.9741692807247453m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-3"></div>
+                </button><button class="Hotspot" slot="hotspot-4" data-position="-26.795359364428172m 54.83025928330715m 7.581833258910242m" data-normal="-0.08151785467365118m -0.022085934360070166m -0.9964271427820743m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-4"></div>
+                </button>
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                <div id="ar-prompt">
+                    <img src="images/ar_hand_prompt.png">
+                </div>
+                </model-viewer>
             </div>
 
-            <p>A clear lid helps you see what's inside effortlessly and make sure your earbuds are right where they should be. A charging indicator light lets you know when the case is charging, and when it's done.</p>
-        </div>
-    </section>
+            <div id="case-section" class="col-span-full">
+                <img id="case-img" src="images/case-image.jpg" alt="3d render of case and earbuds">
+                <p>A clear lid helps you see what's inside effortlessly and make sure your earbuds are right where they should be. A charging indicator light lets you know when the case is charging, and when it's done.</p>
+            </div>
+        </section>
 
-    <section id="xray">
-        <h2>SEE WHAT'S INSIDE...</h2>
-        <img sizes="(max-width: 1366px) 100vw, 1366px"
-                        srcset="
-                        images/xray-mob.jpg 428w,
-                        images/xray-tablet.jpg 768w,
-                        images/xray-desk.jpg 1366w"
-                        src="images/xray-desk.jpg"
-                        alt="earbuds xray slider">
-    </section>
+        <section id="xray">
+            <h2 class="title">SEE WHAT'S INSIDE...</h2>
+            <!-- x-ray view goes here -->
+        </section>
+
+        <div class="divider col-span-full">
+            <img src="images/waveform-divider.svg" alt="waveform">
+        </div>
+
+        <section id="about">
+            <h2 class="title">ABOUT</h2>
+            <div id="about-text">
+                <p></p>
+            </div>
+            <div id="brand-logo">
+                <img src="images/logo-voidaudio-white.svg" alt="VOID Audio logo">
+            </div>
+        </section>
+    </main>
     
-    <footer id="main-footer" class="grid-con">
-        <!-- logo, top button, and copyright (no nav as top nav is sticky) -->
-        <img src="images/logo-voidaudio.svg" alt="VOID Audio logo" class="col-span-1">
-        <p class="col-start-4 col-end-5 m-col-start-12 m-col-end-13">TOP</p>
-    </footer>
+    <div id="footer-con">
+        <footer id="main-footer" class="grid-con">
+            <!-- logo, top button, and copyright (no nav as top nav is sticky) -->
+            <img src="images/logo-voidaudio-white.svg" alt="VOID Audio logo" id="footer-logo" class="col-span-1">
+            <a href="#top" class="col-start-4 col-end-5 m-col-start-12 m-col-end-13">TOP</a>
+
+            <p id="copyright" class="col-span-full">&copy; 2023 VOID Audio</p>
+        </footer>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/main.js"></script>
