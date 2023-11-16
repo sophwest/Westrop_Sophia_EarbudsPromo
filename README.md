@@ -1,18 +1,18 @@
 # VOID Earbuds  
 
-Promotional site for VOID earbuds (which only exist in the void of my mind). 
+Promotional site for VOID Audio earbuds (which only exist in the void of my mind).  
+
+## Installation
+
+Download the .zip folder, unzip it, and launch index.html. Enjoy!
 
 ## Usage  
 
-Launch index.html and enjoy the site! Have fun exploring the interactivity!
+Sorry, I won't VOID my rights to this. For personal use by sophwest. 
 
 ## Contributing  
 
 sophwest / Sophia Westrop  
-
-## History  
-
-
 
 ## Credits  
 
