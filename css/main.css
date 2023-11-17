@@ -25,7 +25,30 @@ body {
   font-family: "dinosaur", Arial, sans-serif;
   font-weight: 900;
   font-style: normal;
-  font-size: 50px;
+  font-size: 40px;
+  padding: 25px;
+  text-align: center;
+}
+
+main p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .title {
+    font-size: 60px;
+  }
+}
+#scroll-video {
+  max-width: 100%;
 }
 
 model-viewer {
@@ -173,7 +196,7 @@ model-viewer > #ar-prompt > img {
 #header-logo {
   margin-left: 10px;
   padding: 10px;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 #main-nav {
@@ -189,6 +212,44 @@ model-viewer > #ar-prompt > img {
   height: 100%;
   background-color: rgba(32, 32, 32, 0.9450980392);
   z-index: 100;
+}
+
+#mobile-nav.display {
+  display: block;
+}
+
+#mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#mobile-nav ul li a {
+  display: flex;
+  font-size: 40px;
+  margin-top: 10%;
+  color: #fff;
+}
+
+#mobile-nav ul li a:hover {
+  color: #c9c9c9;
+}
+
+#x-button {
+  position: absolute;
+  font-size: 40px;
+  color: #c9c9c9;
+  top: 0;
+  right: 0;
+  padding: 10px 20px 10px 20px;
+  margin: 20px;
+}
+
+#x-button:hover {
+  color: #ffffff;
+  cursor: pointer;
 }
 
 #main-nav ul li {
@@ -265,4 +326,70 @@ model-viewer > #ar-prompt > img {
 .divider img {
   height: 50px;
   text-align: center;
+}
+
+#buy-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+#buy-now a {
+  color: #000;
+  background-color: #fff;
+  border-radius: 10px;
+}
+#buy-now a:hover {
+  background-color: #c3e5eb;
+}
+
+#xray-mobile-tablet {
+  text-align: center;
+}
+
+#case-image {
+  margin-top: 20px;
+}
+
+#brand-logo {
+  max-width: 300px;
+}
+
+@media screen and (min-width: 1366px) {
+  #xray-mobile-tablet {
+    display: none;
+  }
+  #xray-slider {
+    display: grid;
+  }
+  #xray-con {
+    position: relative;
+    height: 1080px;
+  }
+  .xray-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1080px;
+  }
+  .right-img {
+    background-image: url(../images/display.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .left-img {
+    background-image: url(../images/xray.jpg);
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .slider {
+    background-color: #ffffff;
+    left: 50%;
+    width: 6px;
+    cursor: pointer;
+  }
+  .divider img {
+    height: 90px;
+  }
 }/*# sourceMappingURL=main.css.map */
