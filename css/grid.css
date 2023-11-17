@@ -19,7 +19,7 @@ html {
 /* ---Mini CSS reset--- */
 
 body, p, h1, h2, h3, h4, h5 {
-   margin: 0px; 
+   margin: 0px auto; 
    padding: 0px;
 }
 
