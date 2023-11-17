@@ -9,9 +9,75 @@
     text-align: center;
 }
 
-// #scrolling-con canvas {
-//     max-width: 100vw;
-//     max-height: 100vh;
-// }
-// not working!!!
+#buy-now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    a {
+      color: #000;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+    a:hover {
+      background-color: #c3e5eb;
+    }
+}
 
+#xray-mobile-tablet {
+  text-align: center;
+}
+
+#case-image {
+  margin-top: 20px;
+}
+
+#brand-logo {
+  max-width: 300px;
+}
+
+@media screen and (min-width: 1366px) {
+    #xray-mobile-tablet {
+        display: none;
+    }
+
+    #xray-slider {
+        display: grid;
+      }
+
+      #xray-con {
+        position: relative;
+        height: 1080px;
+      }
+
+      .xray-img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1080px;
+      }
+
+      .right-img {
+        background-image: url(../images/display.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .left-img {
+        background-image: url(../images/xray.jpg);
+        width: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .slider {
+        background-color: #ffffff;
+        left: 50%;
+        width: 6px;
+        cursor: pointer;
+      }
+
+      .divider img {
+        height: 90px;
+    }
+}

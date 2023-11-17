@@ -1,4 +1,6 @@
 (() => {
+  // gsap.registerPlugin(ScrollTrigger);
+
     const model = document.querySelector("#model");
     const hotspots = document.querySelectorAll(".Hotspot");
   
@@ -28,46 +30,6 @@
         },
 
     ]
-
-    // SCROLLING ANIMATION 
-    const canvas = document.querySelector("#scroll-video");
-    const context = canvas.getContext("2d");
-
-    canvas.width = 1920;
-    canvas.height = 1080;
-
-    const frameCount = 600;
-
-    const images = [];
-
-    const buds = { frame: 0 }
-
-    for(let i=0; i<frameCount; i++) {
-      const img = new Image();
-      img.src = `images/images_scrolling/VOIDEarbuds_Scrolling_${(i+1).toString().padStart(5, '0')}.jpg`;
-      images.push(img);
-    }
-
-    gsap.to(buds, {
-      frame: 599,
-      snap: "frame",
-      scrollTrigger: {
-          trigger: "#scroll-video",
-          pin: true,
-          scrub: 1,
-          markers: false,
-          start: "top, top"
-      },
-      onUpdate: render
-    })
-
-  images[0].addEventListener("onload", render);
-  frames[0].addEventListener("load", render);
-
-  function render() {
-      context.clearRect(0,0, canvas.width, canvas.height);
-      context.drawImage(images[buds.frame],0,0);
-  }
   
     //functions
     function modelLoaded() {
@@ -125,4 +87,101 @@
       hotspot.addEventListener("mouseover", showInfo);
       hotspot.addEventListener("mouseout", hideInfo);
     });
+
+    // XRAY
+    let xrayCon = document.querySelector("#xray-con"),
+    xraySlider = document.querySelector(".slider"),
+    left = document.querySelector(".left-img"),
+    dragging = false,
+    min = 0,
+    max = xrayCon.offsetWidth;
+    
+    function onDown() {
+    dragging = true
+    console.log("onDown wokring!");
+    }
+
+    function onUp() {
+    dragging = false
+    console.log("onUp wokring!");
+    }
+
+    function onMove(event) {
+    if(dragging === true) {
+      let x = event.clientX - xrayCon.getBoundingClientRect().left;
+
+      if(x < min) {
+          x = min;
+      } else if  (x > max) {
+          x = max-5;
+      }
+
+      xraySlider.style.left = x + 'px';
+      left.style.width = x + 'px';
+      }
+    }
+
+    xraySlider.addEventListener('mousedown', onDown);
+    document.body.addEventListener('mouseup', onUp);
+    document.body.addEventListener('mousemove', onMove);
+
+    // MISC
+    let burgerIcon = document.querySelector("#burger-menu"),
+        mobileNav = document.querySelector("#mobile-nav"),
+        xButton = document.querySelector("#x-button"),
+        mobNavLink = document.querySelectorAll("#mobile-nav ul li a")
+    ;
+
+    function toggleNav() {
+      mobileNav.classList.toggle('display');
+    }
+
+    function closeNav() {
+      mobileNav.classList.toggle('display');
+    }
+
+    burgerIcon.addEventListener('click', toggleNav);
+    xButton.addEventListener('click', toggleNav);
+    mobNavLink.forEach(navLinks => navLinks.addEventListener('click', closeNav));
+
+    // SCROLLING ANIMATION 
+    const canvas = document.querySelector("#scroll-video");
+    const context = canvas.getContext("2d");
+
+    canvas.width = 1920;
+    canvas.height = 1080;
+
+    const frameCount = 600;
+
+    const images = [];
+
+    const buds = { frame: 0 }
+
+    for(let i=0; i<frameCount; i++) {
+      const img = new Image();
+      img.src = `images/images_scrolling/VOIDEarbuds_Scrolling_${(i+1).toString().padStart(5, '0')}.jpg`;
+      images.push(img);
+    }
+
+    gsap.to(buds, {
+      frame: 599,
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#scroll-video",
+          pin: true,
+          scrub: 1,
+          markers: false,
+          start: "top, top"
+      },
+      onUpdate: render
+    })
+
+  images[0].addEventListener("load", render);
+  frames[0].addEventListener("load", render);
+
+  function render() {
+      context.clearRect(0,0, canvas.width, canvas.height);
+      context.drawImage(images[buds.frame],0,0);
+    }
+
   })();
