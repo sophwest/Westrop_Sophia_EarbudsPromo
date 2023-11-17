@@ -13,6 +13,9 @@
     margin-left: 10px;
     padding: 10px;
     max-width: 120px;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 #main-nav {
@@ -89,6 +92,10 @@
 }
 
 #burger-menu:hover {
+    cursor: pointer;
+}
+
+#cart:hover {
     cursor: pointer;
 }
 
