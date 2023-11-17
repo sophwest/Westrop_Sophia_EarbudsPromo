@@ -1,5 +1,6 @@
 (() => {
-  // gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
 
     const model = document.querySelector("#model");
     const hotspots = document.querySelectorAll(".Hotspot");
@@ -98,12 +99,10 @@
     
     function onDown() {
     dragging = true
-    console.log("onDown wokring!");
     }
 
     function onUp() {
     dragging = false
-    console.log("onUp wokring!");
     }
 
     function onMove(event) {
@@ -143,6 +142,18 @@
     burgerIcon.addEventListener('click', toggleNav);
     xButton.addEventListener('click', toggleNav);
     mobNavLink.forEach(navLinks => navLinks.addEventListener('click', closeNav));
+
+    //SMOOTH SCROLL 
+    const linkScroll = document.querySelectorAll(".smoothscroll");
+
+    function smoothScrolling(e) {
+      e.preventDefault();
+      let selectedLink = e.currentTarget.hash;
+
+      gsap.to(window, {duration: 1, scrollTo:{y:`${selectedLink}`, offsetY: 100}})
+  }
+
+  linkScroll.forEach(link => link.addEventListener('click', smoothScrolling))
 
     // SCROLLING ANIMATION 
     const canvas = document.querySelector("#scroll-video");
