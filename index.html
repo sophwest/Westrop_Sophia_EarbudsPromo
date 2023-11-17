@@ -111,7 +111,16 @@
                 </div>
 
                 <div id="case-image" class="col-span-full m-col-span-6 l-col-span-6">
-                    <img src="images/case-image.jpg" alt="3d render of case and earbuds">
+                    <picture>
+                        <img
+                        sizes="(max-width: 1920px) 100vw, 1920px"
+                        srcset="
+                        images/case-image-mob.jpg 428w,
+                        images/case-image-tablet.jpg 768w,
+                        images/case-image.jpg 1366w"
+                        src="images/case-image.jpg"
+                        alt="earbuds case promo image">
+                    </picture>
                 </div>
                 <div id="case-text" class="col-span-full m-col-span-6 l-col-span-6">
                     <p>A clear lid helps you see what's inside effortlessly and make sure your earbuds are right where they should be. A charging indicator light lets you know when the case is charging, and when it's done.</p>
