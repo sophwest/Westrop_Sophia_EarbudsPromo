@@ -28,6 +28,46 @@
         },
 
     ]
+
+    // SCROLLING ANIMATION 
+    const canvas = document.querySelector("#scroll-video");
+    const context = canvas.getContext("2d");
+
+    canvas.width = 1920;
+    canvas.height = 1080;
+
+    const frameCount = 600;
+
+    const images = [];
+
+    const buds = { frame: 0 }
+
+    for(let i=0; i<frameCount; i++) {
+      const img = new Image();
+      img.src = `images/images_scrolling/VOIDEarbuds_Scrolling_${(i+1).toString().padStart(5, '0')}.jpg`;
+      images.push(img);
+    }
+
+    gsap.to(buds, {
+      frame: 599,
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#scroll-video",
+          pin: true,
+          scrub: 1,
+          markers: false,
+          start: "top, top"
+      },
+      onUpdate: render
+    })
+
+  images[0].addEventListener("onload", render);
+  frames[0].addEventListener("load", render);
+
+  function render() {
+      context.clearRect(0,0, canvas.width, canvas.height);
+      context.drawImage(images[buds.frame],0,0);
+  }
   
     //functions
     function modelLoaded() {
