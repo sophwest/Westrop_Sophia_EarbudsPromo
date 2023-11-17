@@ -32,8 +32,22 @@
   margin-top: 20px;
 }
 
+#case-text {
+  display: flex;
+  align-items: center;
+}
+
 #brand-logo {
+  display: flex;
+  align-items: center;
   max-width: 300px;
+}
+
+#main-footer a {
+  color: #c9c9c9;
+  &:hover {
+    color: #c3e5eb;
+  }
 }
 
 @media screen and (min-width: 1366px) {
